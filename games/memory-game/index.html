@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="m-g.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <style>
+    .back-button {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #0077ff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+      user-select: none;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .back-button:hover {
+      background-color: #005bb5;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+    }
+
+    .back-button:active {
+      background-color: #003f7f;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <h1>Memory Card Game</h1>
+  <div class="stats">
+    <p>Moves: <span id="moves">0</span></p>
+  </div>
+  <div class="game-board" id="gameBoard"></div>
+  <button id="restartBtn">Restart Game</button>
+  
+  <button class="back-button" onclick="goBackToHub()">← Back to Game Hub</button>
+
+  <script src="m-g.js"></script>
+  <script>
+    function goBackToHub() {
+      window.parent.postMessage("closeModal", "*");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.scrambled-word {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 90%;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #0af;
+  color: white;
+}
+
+button:hover {
+  background-color: #08c;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  color: #0af;
+  text-decoration: none;
+}
+
+#feedback {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}

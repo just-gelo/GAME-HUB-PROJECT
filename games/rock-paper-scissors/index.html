@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rps.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    #back-to-hub {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #0077ff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+      display: inline-block;
+      user-select: none;
+      text-transform: uppercase;
+    }
+
+    #back-to-hub:hover {
+      background-color: #005bb5;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+    }
+
+    #back-to-hub:active {
+      background-color: #003f7f;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+      <button class="choice" data-choice="rock">🪨 Rock</button>
+      <button class="choice" data-choice="paper">📄 Paper</button>
+      <button class="choice" data-choice="scissors">✂️ Scissors</button>
+    </div>
+    <div class="result">
+      <p>You chose: <span id="playerChoice">-</span></p>
+      <p>Computer chose: <span id="computerChoice">-</span></p>
+      <h2 id="outcome">Make your move!</h2>
+    </div>
+    <div class="scoreboard">
+      <p>Player: <span id="playerScore">0</span></p>
+      <p>Computer: <span id="computerScore">0</span></p>
+    </div>
+    <button id="back-to-hub">← Back to Game Hub</button>
+  </div>
+
+  <script src="rps.js"></script>
+  <script>
+    document.getElementById("back-to-hub").addEventListener("click", () => {
+      window.parent.postMessage("closeModal", "*");
+    });
+  </script>
+</body>
+</html>

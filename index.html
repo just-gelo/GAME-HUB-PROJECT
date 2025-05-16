@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr. Everything Game Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="gh.css" />
+</head>
+<body>
+<header>
+  <div class="typewriter-wrapper">
+    <div class="typewriter-flex">
+      <h1 class="typewriter" id="typewriter-text"></h1>
+      <span class="cursor">│</span>
+    </div>
+  </div>
+</header>
+
+<div class="main-layout">
+  <nav id="genre-filter">
+    <h2>Genres</h2>
+    <ul>
+      <li data-genre="all" class="active">All</li>
+      <li data-genre="puzzle">Puzzle</li>
+      <li data-genre="action">Action</li>
+      <li data-genre="strategy">Strategy</li>
+      <li data-genre="arcade">Arcade</li>
+    </ul>
+  </nav>
+
+  <main id="game-grid">
+    <div class="game-card" data-genre="puzzle" onclick="openModal('games/memory-game/index.html')">
+      <span class="game-title" title="Memory Game">Memory Game</span>
+      <span class="game-icon">🧠</span>
+    </div>
+    <div class="game-card" data-genre="action" onclick="openModal('games/snake-game/index.html')">
+      <span class="game-title" title="Snake Game">Snake Game</span>
+      <span class="game-icon">🐍</span>
+    </div>
+    <div class="game-card" data-genre="puzzle" onclick="openModal('games/word-scramble-game/index.html')">
+      <span class="game-title" title="Word Scramble">Word Scramble</span>
+      <span class="game-icon">🔤</span>
+    </div>
+    <div class="game-card" data-genre="strategy" onclick="openModal('games/rock-paper-scissors/index.html')">
+      <span class="game-title" title="Rock Paper Scissors">Rock Paper Scissors</span>
+      <span class="game-icon">✊📄✂️</span>
+    </div>
+    <div class="game-card" data-genre="puzzle" onclick="openModal('games/typing-speed-test/index.html')">
+      <span class="game-title" title="Typing Test">Typing Test</span>
+      <span class="game-icon">⌨️</span>
+    </div>
+    <div class="game-card" data-genre="strategy" onclick="openModal('games/simple-number-guessing-game/index.html')">
+      <span class="game-title" title="Number Guess">Number Guess</span>
+      <span class="game-icon">🔢</span>
+    </div>
+    <div class="game-card" data-genre="strategy" onclick="openModal('games/tic-tac-toe-game-with-bot/index.html')">
+      <span class="game-title" title="Tic Tac Toe">Tic Tac Toe</span>
+      <span class="game-icon">❌⭕</span>
+    </div>
+    <div class="game-card" data-genre="arcade" onclick="openModal('games/slot-machine-game/index.html')">
+      <span class="game-title" title="Slot Machine">Slot Machine</span>
+      <span class="game-icon">🎰</span>
+    </div>
+  </main>
+</div>
+
+<div id="game-modal" class="hidden">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <iframe id="game-frame" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+<script src="gh.js"></script>
+</body>
+</html>

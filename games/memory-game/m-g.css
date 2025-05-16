@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4ff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.stats {
+  margin-bottom: 10px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  background-color: #fff;
+  color: #333;
+  cursor: default;
+  pointer-events: none;
+}
+
+.card.matched {
+  background-color: #28a745;
+  color: white;
+}
+
+button, .back-link {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.back-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
